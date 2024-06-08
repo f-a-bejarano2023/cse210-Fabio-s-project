@@ -9,34 +9,39 @@ class Program
         int gradePercent = int.Parse(Console.ReadLine());
         
         //Determine the grade letter depending on the score percentage
-        if (gradePercent  >  90)
+        string letter;
+        if (gradePercent >= 90)
         {
-            Console.WriteLine("You received an A grade");
+            letter = "A";
         }
-        else if (gradePercent  >=  80)
+        else if (gradePercent >= 80)
         {
-            Console.WriteLine("You received a B grade");
+            letter = "B";
         }
-        else if (gradePercent  >=  70)
+        else if (gradePercent >= 70)
         {
-            Console.WriteLine("You received a C grade");
+            letter = "C";
         }
-        else if (gradePercent  >=  60)
+        else if (gradePercent >= 60)
         {
-            Console.WriteLine("You received a D grade");
-        }
-        else if (gradePercent  <  60)
-        {
-            Console.WriteLine("You received an F grade");
-        }
-
-        if (gradePercent >= 70)
-        {
-            System.Console.WriteLine("You passed this course. Congratulations!");
+            letter = "D";
         }
         else
         {
-            System.Console.WriteLine("You barely made it. you can try again next block!");
+            letter = "F";
+        }
+
+        //Show the letter grade
+        Console.WriteLine($"Your letter grade is: {letter}");
+
+        //Display the appropriate message informing the user of a passed or failed course
+        if (gradePercent >= 70)
+        {
+            Console.WriteLine("Congratulations! You passed the course.");
+        }
+        else
+        {
+            Console.WriteLine("Unfortunately, you did not pass the course. Try again next semester... you'll do better next time!");
         }
     }
 }
