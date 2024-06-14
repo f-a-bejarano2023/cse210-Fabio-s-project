@@ -44,5 +44,17 @@ class Program
         // Find the largest number in the list
         int largest = numbers.Count > 0 ? numbers.Max() : 0;
         Console.WriteLine($"The largest number is: {largest}");
+
+        // Find the smallest positive number
+        int smallestPositive = numbers.Where(x => x > 0).Min();
+        Console.WriteLine($"The smallest positive number is: {smallestPositive}");
+
+        // Create a new list with sorted numbers and display it
+        List<int> newNumbers = numbers.OrderBy(x => x).ToList();
+        Console.WriteLine("Sorted numbers:");
+        foreach (int num in newNumbers)
+        {
+            Console.WriteLine(num);
+        }    
     }
 }
