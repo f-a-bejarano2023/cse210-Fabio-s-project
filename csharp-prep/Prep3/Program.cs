@@ -8,8 +8,8 @@ class Program
         
         while (playAgain)
         {
-            Random randomGenerator = new Random();
-            int secretNumber = randomGenerator.Next(1, 101);
+            Console.WriteLine("Enter a secret numer between 1 and 100");
+            int secretNumber = int.Parse(Console.ReadLine());
             int guessNumber = 0;
 
             Console.WriteLine("Guess the secret number between 1 and 100:");
